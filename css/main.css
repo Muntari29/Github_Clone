@@ -63,3 +63,52 @@
 .input--text::-webkit-input-placeholder {
 	color: #cacaca;
 }
+
+/* HEADER */
+header {
+    border-bottom: 1px solid rgba(0,0,0,.75);
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    background: #FFF;
+}
+
+header .inner {
+    max-width: 980px;
+    height: 78px;
+    /* 마진으로 중앙을 맞추기 위해선 가로 사이즈가 정해져있어야함 */
+    margin: 0 auto;
+ }
+
+ header .menu-group {
+     /* 수평 !! flex를 사용함으로써 align-items 사용 가능*/
+     display: flex;
+     align-items: center;
+     height: 100%;
+ }
+
+header .logo {
+     margin-right: 10px;
+ }
+
+ header .logo a{
+     background:  url("../img/logo.svg");
+     width: 32px;
+     height: 32px;
+     display: block;
+     /* 구조적으로 텍스트를 남기는 방법(백그라운드를 이용해 이미지 삽입시) */
+     text-indent: -9999px;
+}
+
+header .logo a:hover{
+    background:  url("../img/logo_on.svg");
+}
+
+header .main-menu {
+     display: flex;
+ }
+
+ header .main-menu li a{
+     /* 클릭 가능 거리 확장 */
+     display: block;
+     padding: 10px;
+     color: #3c4146;
+}
