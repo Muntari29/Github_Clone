@@ -23,6 +23,38 @@ a {
 .float--right {
     float: right;
 }
+/* SUMMARY */
+
+.summary {}
+
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.summary__description {
+    font-size: 26px;
+    font-weight: 300;
+    color: #767676;
+    line-height: 1.5;
+}
+
+/* SECTION & INNER */
+/* 반복되는 부분 공통화 */
+.section {
+    /* 위치기준 자기자신 */
+    position: relative;
+}
+
+.section .inner{
+    max-width: 980px;
+    margin: 0 auto;
+    /* 마진, 패딩으로 여백이 생기면 요소가 무분별하게 커지는것을 방지 */
+    box-sizing: border-box;
+    position: relative;
+}
 /* BTN */
 .btn {
 	height: 34px;
@@ -91,10 +123,10 @@ header {
 }
 
 header .inner {
-    max-width: 980px;
+    /* max-width: 980px; */
     height: 78px;
     /* 마진으로 중앙을 맞추기 위해선 가로 사이즈가 정해져있어야함 */
-    margin: 0 auto;
+    /* margin: 0 auto; */
  }
 
 header .menu-group {
@@ -186,4 +218,45 @@ header .sub-menu a{
 
 header .sub-menu a:hover{
     color: #4078c0;
+}
+
+/* VISUAL */
+
+.section--visual {
+    background-image: url("../img/bg.jpg");
+    /* 백그라운드 이미지 반복하지 않겟다. */
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    /* 배경이미지가 섹션 전체를 아우르게 된다. */
+    background-size: cover;
+}
+
+/* 배경 이미지 조금 더 어둡게 설정(텍스트와 배경 사이 어두운 요소를 깜!) */
+.section--visual::before {
+    /* after, before 공식처럼 content */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.3);
+}
+
+
+.section--visual .inner {
+    padding: 160px 0;
+}
+
+.section--visual .summary__title {
+    color: #FFF;
+    font-size: 54px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),
+                 0 1px 25px rgba(0,0,0,.75);
+}
+
+.section--visual .summary__description {
+    color: #FFF;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25),
+                 0 1px 25px rgba(0,0,0,.75);
 }
