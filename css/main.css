@@ -347,9 +347,10 @@ header .sub-menu a:hover{
 }
 
 .section--feature .tiles ul {
-    display: grid;
+    /* display: grid; */
     /* 4개의 컬럼의 그리드 컨테이너를 1:1 비율로 만듬 */
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* 구형 브라우저에서는 그리드를 인식못할수도있기에 clearfix로 하겟다. */
 }
 
 .section--feature .tiles li {
@@ -358,6 +359,10 @@ header .sub-menu a:hover{
     line-height: 1.5;
     border-right: 1px solid #e5e5e5;
     box-sizing: border-box;
+    /* float을 사용햇으면 부모 요소에 clearfix가 있어야한다. */
+    float: left;
+    width: 25%;
+
 }
 
 .section--feature .tiles li:last-child {
@@ -382,4 +387,25 @@ header .sub-menu a:hover{
     font-size: 14px;
     color: #767676;
 
+}
+
+/* where is */
+
+.section--where-is {
+
+}
+
+.section--where-is .inner {
+    padding-top: 80px;
+
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    border: 1px solid rgba(0,0,0,.2);
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    box-sizing: border-box;
 }
