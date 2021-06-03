@@ -57,7 +57,8 @@
     <!-- CDN을 활용해 reset.css 파일없이 리셋하기 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    
+    <!-- html 로드가 다 끝나면 (비동기 관련) defer 후 main.js 연결 -->
+    <script defer src="main.js"></script>
 </head>
 <body>
 <!-- body에 직접적으로 폰트를 입히지 않기 위한 div 언더바 두번(BEM 작명 규칙에 따름) 
@@ -72,14 +73,14 @@
                 <div class="logo">
                     <a href="#">Github</a>
                 </div>
-                <ul class="main-menu">
+                <ul class="main-menu toggle">
                     <li><a href="#">Presonal</a></li>
                     <li><a href="#">Open source</a></li>
                     <li><a href="#">Business</a></li>
                     <li><a href="#">Explore</a></li>
                 </ul>
             </div>
-            <div class="sign-group float--right">
+            <div class="sign-group float--right toggle">
                 <div class="btn-group">
                     <a href="#" class="btn sign-in">Sign in</a>
                     <a href="#" class="btn btn--primary sign-up">Sign up</a>
@@ -94,10 +95,10 @@
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Support</a></li>
-
-
                 </ul>
             </div>
+
+            <div id="toggle-btn">Header Menu Toggle Button</div>
 
         </div>
     </header>
@@ -188,7 +189,7 @@
             <div class="summary">
                 <div class="summary__title">Where is GitHub?
                 </div>
-                <div class="summary_description">GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
+                <div class="summary__description">GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.
                 </div>
             </div>
             <div id="map">
