@@ -105,13 +105,28 @@
     <section class="section section--visual">
         <div class="inner">
             <div class="summary">
-                <div class="summary__title">How people build software
+                <!-- build software를 &nbsp;를 이용하 하나의 단어로 묶어 자연스럽게 줄바꿈을 유도한다 
+                반응형을 추가하려고 하기 때문에 <br>을 사용하지 않는다.-->
+                <div class="summary__title">How&nbsp;people build&nbsp;software
                 </div>
-                <div class="summary__description">Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.
+                <div class="summary__description">Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
                 </div>
             </div>
             <form id="sign-form" method="POST" action="">
-
+                <ul>
+                    <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+                    <li><input type="email" class="input--text" placeholder="Your email address"></li>
+                    <li>
+                        <input type="password" class="input--text" placeholder="Create a password">
+                        <p class="caption">Use at least one letter, one numeral, and seven characters.
+                        </p>
+                    </li>
+                    <li>
+                        <button type="submit" class="btn btn--primary">Sign up for Github</button>
+                        <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.
+                        </p>
+                    </li>
+                </ul>
             </form>
 
         </div>
